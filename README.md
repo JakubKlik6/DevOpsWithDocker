@@ -57,5 +57,25 @@ Read the Dockerfile and/or docs to learn what input will get the application to 
 
 Submit the secret message and command(s) given to get it as your answer.
 
-  ![1 6](https://user-images.githubusercontent.com/94892289/208764836-c495d620-3446-450e-87b4-de6c52c79b29.png)
+![1 6](https://user-images.githubusercontent.com/94892289/208764836-c495d620-3446-450e-87b4-de6c52c79b29.png)
 <br> <br>
+
+<li>Exercise 1.7: Two line Dockerfile <br>
+By default our devopsdockeruh/simple-web-service:alpine doesn't have a CMD. It instead uses ENTRYPOINT to declare which application is run.<br>
+We'll talk more about ENTRYPOINT in the next section, but you already know that the last argument in docker run can be used to give command.<br>
+As you might've noticed it doesn't start the web service even though the name is "simple-web-service". A command is needed to start the server!<br>
+Try docker run devopsdockeruh/simple-web-service:alpine hello. The application reads the argument but will inform that hello isn't accepted.<br>
+In this exercise create a Dockerfile and use FROM and CMD to create a brand new image that automatically runs the server. Tag the new image as "web-server"
+
+Return the Dockerfile and the command you used to run the container.
+  
+![1 7](https://user-images.githubusercontent.com/94892289/208766075-b4774037-b9a9-417e-a11c-a87911eaf9c5.png)
+<br> <br>
+  
+<li>Exercise 1.8: Image for script<br>
+We can improve our previous solutions now that we know how to create and build a Dockerfile.<br>
+Create a Dockerfile for a new image that starts from ubuntu:20.04 and add instructions to install curl into that image. <br>
+Then add instructions to copy the script file into that image and finally set it to run on container start using CMD.<br>
+After you have filled the Dockerfile, build the image with the tag "curler".
+
+![1 8](https://user-images.githubusercontent.com/94892289/208766420-60bc919d-c2a4-4948-9f75-a3c453c5c356.png)
