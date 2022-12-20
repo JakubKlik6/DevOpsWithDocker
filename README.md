@@ -77,6 +77,6 @@ Return the Dockerfile and the command you used to run the container.
 We can improve our previous solutions now that we know how to create and build a Dockerfile.<br>
 Create a Dockerfile for a new image that starts from ubuntu:20.04 and add instructions to install curl into that image. <br>
 Then add instructions to copy the script file into that image and finally set it to run on container start using CMD.<br>
-After you have filled the Dockerfile, build the image with the tag "curler".
+After you have filled the Dockerfile, build the image with the tag "curler".<br>
 
 ![1 8](https://user-images.githubusercontent.com/94892289/208766420-60bc919d-c2a4-4948-9f75-a3c453c5c356.png)
